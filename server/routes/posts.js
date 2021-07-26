@@ -1,9 +1,9 @@
 import express from 'express';
+import { getPosts, ceratePost } from '../controllers/posts.js';
 
 const router = express.Router();
 
-router.get('/', (req, res) => {
-	res.send('This WORKS!');
-})
+router.get('/', getPosts);
+router.post('/', ceratePost);
 
 export default router;
